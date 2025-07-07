@@ -8,11 +8,11 @@ class Project():
         pass
     
     def make_selection(self):
-        instalation = instalation_parameters
-        
-        solar_conditions = solar_parameters(instalation)
-        
-        project_demand = demand(instalation, solar_conditions)
-        
-        selection(instalation, solar_conditions, project_demand)
+        params = instalation_parameters(
+            lat=23,
+            lon=22,
+            alt=21
+        )
+                
+        selection(params)
         
