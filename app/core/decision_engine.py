@@ -39,6 +39,26 @@ class decision_engine():
     
         return modules_viable
 
+    # Get the number of modules needed to meet the power required for each model of module
+    def number_modules(self, modules):
+        number = None
+
+        for module in modules:
+            number = round(self.estimated_power_required / module)
+
+        return number
+    
+    def inverter_viable(self):
+        for number_inverters in range(1, 6):
+            power_needed = self.estimated_power_required / number_inverters
+            
+            power_needed_min = power_needed * 0.85
+            power_needed_max = power_needed * 1.30
+
+            # Filter the modules within the power max and power min
+
+    def 
+
     # That method is under development, don't use it
     def viable_modules_floor(self, area):
         # First, each module will have a distance between it because of the inclination angle
