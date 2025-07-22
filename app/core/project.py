@@ -1,7 +1,7 @@
-from selection import selection
+from app.core.decision_engine import selection
 from demand import demand
-from instalation_parameters import instalation_parameters
-from instalation_parameters import solar_parameters
+from app.core.instalation import instalation_parameters
+from app.core.instalation import solar_parameters
 
 class Project():
     def __init__():
